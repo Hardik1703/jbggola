@@ -20,8 +20,8 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
 
 
-    <!-- animation link -->
-    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet" />
+    <!-- AOS CSS Scroll Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body oncontextmenu="return false">
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top d-flex align-items-center header-transparent">
         <div class="container d-flex align-items-center">
@@ -63,21 +63,21 @@
 
     <main>
         <section class="section-gap ">
-            <div class="container text-center title">
+            <div class="container text-center title" data-aos="zoom-in">
                 <h2 class="my-5">Video</h2>
             </div>
             <div class="v-section">
                 <div class="col-lg-12 v-main">
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-4 col-md-4">
-                            <div class="video-container">
+                            <div class="video-container" data-aos="fade-up" data-aos-delay="100">
                                 <div class="video">
                                     <video src="assets/video/01 Teaser-1-1.mp4" muted class="video-item"></video>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4">
-                            <div class="video-container">
+                            <div class="video-container" data-aos="fade-up" data-aos-delay="250">
                                 <div class="video">
                                     <video src="assets/video/02 Ferrero Rocher Gola-2.mp4" muted
                                         class="video-item"></video>
@@ -85,7 +85,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4">
-                            <div class="video-container">
+                            <div class="video-container" data-aos="fade-up" data-aos-delay="400">
                                 <div class="video">
                                     <video src="assets/video/03 Cadbury Gola-3.mp4" muted class="video-item"></video>
                                 </div>
@@ -96,15 +96,15 @@
 
                 <div class="col-lg-12 col-md-12 v-main">
                     <div class="row d-flex justify-content-center">
-                        <div class="col-lg-4 col-md-4 animate__animated animate__bounceInUp animate__delay-1s">
-                            <div class="video-container">
+                        <div class="col-lg-4 col-md-4">
+                            <div class="video-container" data-aos="fade-up" data-aos-delay="550" data-aos-offset="200">
                                 <div class="video">
                                     <video src="assets/video/04 Choco Ball Gola-4.mp4" muted class="video-item"></video>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4">
-                            <div class="video-container">
+                            <div class="video-container" data-aos="fade-up" data-aos-delay="700" data-aos-offset="200">
                                 <div class="video">
                                     <video src="assets/video/05 Choco Sundae Gola-5.mp4" muted
                                         class="video-item"></video>
@@ -112,7 +112,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4">
-                            <div class="video-container">
+                            <div class="video-container" data-aos="fade-up" data-aos-delay="850" data-aos-offset="200">
                                 <div class="video">
                                     <video src="assets/video/06 Cool Brownie Gola-6.mp4" muted
                                         class="video-item"></video>
@@ -149,7 +149,7 @@
             <div class="row text-white">
                 <div class="col-lg-4 col-md-12 p-4">
                     <h3 class="fw-bold fs-3 mb-3">
-                        <img src="assets/video/logojbg.png" class="img-fluid" alt="Jay bhavani gola">
+                        <img src="assets/video/logojbg.png" class="img-fluid" alt="JBG LOGO" />
                     </h3>
                     <p class="mx-lg-5 footer-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
                         quos rerum
@@ -161,13 +161,13 @@
                 <div class="col-lg-2  col-md-4 p-4">
                     <h5 class="mb-3 fw-bold h-link">Links</h5>
                     <ul class="links p-0">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About us</a></li>
-                        <li><a href="franchises.html">Our Franchises</a></li>
-                        <li><a href="product.html">Our Product</a></li>
-                        <li><a href="record.html">Record</a></li>
-                        <li><a href="video.html">Video</a></li>
-                        <li><a href="contact.html">Contact us</a></li>
+                        <li><a href="index">Home</a></li>
+                        <li><a href="about">About us</a></li>
+                        <li><a href="franchises">Our Franchises</a></li>
+                        <li><a href="product">Our Product</a></li>
+                        <li><a href="record">Record</a></li>
+                        <li><a href="video">Video</a></li>
+                        <li><a href="contact">Contact us</a></li>
                     </ul>
                 </div>
                 <!----------------- Follow Us Section------------->
@@ -213,7 +213,7 @@
                             <li>
                                 <a href="#" class="d-flex text-decoration-none">
                                     <i class="fa-solid fa-envelope pe-2 mt-1"></i>
-                                    <p>Jbgdryfruitdishgola@gmail.com</p>
+                                    <p>Jbgdryfruitgola@gmail.com</p>
                                 </a>
                             </li>
                         </ul>
@@ -223,13 +223,20 @@
             </div>
         </div>
         <h6 class=" text-center m-0 p-2 fs-md-5 copyrightColor">
-            © 2023 Jay Bhavani DryFruit Dish Gola. Created with 💙 by <a href="#"
-                class="text-white h-font text-decoration-none">Hardik
-                Gambhava</a>
+            © Copyright 2023 Jay Bhavani Dryfruit Dish Gola. All Right Reserved.
         </h6>
     </footer>
 
     <a href="javascript:void(0)" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <!-- AOS JS Scroll Animation -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1500,
+            easing: 'ease',
+            once: true
+        });
+    </script>
     <script src="assets/vendor/jquery/jquery.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>

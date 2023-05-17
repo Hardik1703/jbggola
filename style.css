@@ -31,9 +31,10 @@
 }
 
 body {
-  font-family: "Quicksand";
+  font-family: "Quicksand" sans-serif;
   background-color: var(--background-color);
   color: var(--text-white);
+  overflow-x: hidden;
   font-weight: 300;
   box-sizing: border-box;
 }

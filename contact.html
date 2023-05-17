@@ -26,6 +26,9 @@
 
   <!-- custome css link -->
   <link rel="stylesheet" href="style.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 
 <body oncontextmenu="return false">
@@ -119,8 +122,9 @@
                     <input type="text" name="city" id="city" placeholder="City" required>
                   </div>
                   <div class="col-md-5" data-aos="fade-up" data-aos-delay="800">
-                    <input type="text" name="phone" onkeypress="isInputNumber(event)" maxlength="10" minlength="10"
-                      id="phone" placeholder="Phone" required>
+                    <input type="text" name="phone" maxlength="10" minlength="10" id="phone" placeholder="Phone"
+                      required>
+                    <p id="mobileerror"></p>
                   </div>
                   <div class="col-md-11" data-aos="fade-up" data-aos-delay="1050">
                     <textarea name="message" id="message" rows="5" placeholder="Type Message" required></textarea>
@@ -128,6 +132,7 @@
                   <div class="btn-center d-flex mt-4" data-aos="zoom-in-up" data-aos-delay="1150">
                     <button type="submit" class="sumbitBtn btn mx-auto">Send Message</button>
                   </div>
+                  <h6 id="successmsg" class="d-flex align-items-center justify-content-center mt-3"></h6>
                 </div>
               </form>
             </div>
@@ -218,9 +223,20 @@
     </h6>
   </footer>
 
-  <script>
-    
+  <script type="text/javascript">
+    $(document).ready(function () {
+      //called when key is pressed in textbox
+      $("#phone").keypress(function (e) {
+        if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+          //display error message
+          // $("#mobileerror").html("Digits Only").show().delay(1000).fadeOut("show");
+          return false;
+        }
+
+      });
+    });
   </script>
+
 
   <a href="javascript:void(0)" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
   <!-- AOS JS Scroll Animation -->
@@ -243,7 +259,7 @@
       fetch(scriptURL, { method: 'POST', body: new FormData(form) })
         .then(response => {
           form.reset()
-          alert("Thanks for Contact Us.");
+          $("#successmsg").html("Sucssessfully Contact Us.....").show().fadeOut();
           window.location.href = "index.html";
         })
         .catch(error => alert("Server Error Please try again!"))
